@@ -17,6 +17,10 @@
       {
         "name": "PBI_ProTooling",
         "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "__TEdtr",
+        "value": "1"
       }
     ],
     "culture": "es-PA",
@@ -177,6 +181,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "9fe70a70-a97b-4a86-a1d3-347e31205985",
             "sourceColumn": "HadHeartAttack",
             "summarizeBy": "none"
@@ -190,6 +195,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "63197bb2-7709-4719-a810-573cabe99e37",
             "sourceColumn": "HadAngina",
             "summarizeBy": "none"
@@ -203,6 +209,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "747cd9b0-96be-491e-86ac-45a78ab30c77",
             "sourceColumn": "HadStroke",
             "summarizeBy": "none"
@@ -216,6 +223,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "2eb5daf6-7e33-48c9-a50a-059f00e1f9e7",
             "sourceColumn": "HadAsthma",
             "summarizeBy": "none"
@@ -229,6 +237,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "858a1f53-ae0c-4978-a632-d1e94b84bca2",
             "sourceColumn": "HadSkinCancer",
             "summarizeBy": "none"
@@ -242,6 +251,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "e96e563b-68df-4c9f-8186-a63daf47dfef",
             "sourceColumn": "HadCOPD",
             "summarizeBy": "none"
@@ -255,6 +265,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "13a380c4-c878-48bf-ae54-80822b6da882",
             "sourceColumn": "HadDepressiveDisorder",
             "summarizeBy": "none"
@@ -268,6 +279,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "ab5e28a2-06cf-44e5-9789-3ca9464f916c",
             "sourceColumn": "HadKidneyDisease",
             "summarizeBy": "none"
@@ -281,6 +293,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "2ba01f45-3467-4d0d-81eb-7bc009f60cb1",
             "sourceColumn": "HadArthritis",
             "summarizeBy": "none"
@@ -294,6 +307,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "7cbff37c-7373-4b07-9240-83f87f8981ec",
             "sourceColumn": "HadDiabetes",
             "summarizeBy": "none"
@@ -582,9 +596,286 @@
             "lineageTag": "29c41eb8-25c9-4a2a-9533-9fd62cfb16f6",
             "sourceColumn": "CovidPos",
             "summarizeBy": "none"
+          },
+          {
+            "name": "HadHeartAttack_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadHeartAttack]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadHeartAttack]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "9245a00b-c896-4865-938e-8692d7c195d2",
+            "type": "calculated"
+          },
+          {
+            "name": "HadAngina_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadAngina]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadAngina]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "29e8564f-e3cb-4b4b-ba2d-660102936297",
+            "type": "calculated"
+          },
+          {
+            "name": "HadStroke_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadStroke]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadStroke]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "3a65cdba-0f7e-4744-a8a8-1fb38f50ad7a",
+            "type": "calculated"
+          },
+          {
+            "name": "HadAsthma_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadAsthma]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadAsthma]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "ad3637a8-4847-4be1-9696-a3ac66a8b8e0",
+            "type": "calculated"
+          },
+          {
+            "name": "HadSkinCancer_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadSkinCancer]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadSkinCancer]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "ef177db7-cbd2-481d-a1c9-036f73d64756",
+            "type": "calculated"
+          },
+          {
+            "name": "HadCOPD_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadCOPD]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadCOPD]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "a87f5b09-595c-4b03-8c9b-7a876e51ffe3",
+            "type": "calculated"
+          },
+          {
+            "name": "HadDepressiveDisorder_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadDepressiveDisorder]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadDepressiveDisorder]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "0700e8c8-6f5f-4e4a-8c3f-892e1d0f8178",
+            "type": "calculated"
+          },
+          {
+            "name": "HadKidneyDisease_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadKidneyDisease]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadKidneyDisease]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "bf1c66a0-24c8-4982-bdc1-3cbca7b99d0a",
+            "type": "calculated"
+          },
+          {
+            "name": "HadArthritis_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadArthritis]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadArthritis]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "00393cd3-b8a6-41f4-ba8f-073f93fbbd20",
+            "type": "calculated"
+          },
+          {
+            "name": "HadDiabetes_Bool",
+            "dataType": "int64",
+            "expression": "IF(UPPER('heart_2022_no_nans'[HadDiabetes]) = \"YES\", 1, IF(UPPER('heart_2022_no_nans'[HadDiabetes]) = \"NO\", 0, BLANK()))",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "98445599-187c-4879-9420-6bf5a7dc91d9",
+            "type": "calculated"
+          },
+          {
+            "name": "BMI_Category",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(",
+              "        TRUE(),",
+              "        'heart_2022_no_nans'[BMI] < 18.5, \"Bajo Peso\",",
+              "        'heart_2022_no_nans'[BMI] >= 18.5 && 'heart_2022_no_nans'[BMI] < 25, \"Normal\",",
+              "        'heart_2022_no_nans'[BMI] >= 25 && 'heart_2022_no_nans'[BMI] < 30, \"Sobrepeso\",",
+              "        'heart_2022_no_nans'[BMI] >= 30, \"Obesidad\"",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "a800e16a-7119-4e8e-ae6b-9779b9d42d2f",
+            "type": "calculated"
+          },
+          {
+            "name": "Health_Risk",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    IF(",
+              "        'heart_2022_no_nans'[HadHeartAttack] = \"Yes\" || ",
+              "        'heart_2022_no_nans'[HadStroke] = \"Yes\" || ",
+              "        'heart_2022_no_nans'[HadDiabetes] = \"Yes\" || ",
+              "        'heart_2022_no_nans'[HadCOPD] = \"Yes\", \"Alto Riesgo\", \"Bajo Riesgo\"",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "cbdf5679-2f08-4614-9b48-232eb274bac4",
+            "type": "calculated"
+          },
+          {
+            "name": "Active_Status",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    IF('heart_2022_no_nans'[PhysicalActivities] = \"Yes\", \"Activo\", \"Sedentario\")"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "aa397f0b-40ac-4cd9-9d5d-3d5280d84682",
+            "type": "calculated"
           }
         ],
         "lineageTag": "d92ce5f1-7ed7-4ba8-bc4b-bcceded1001b",
+        "measures": [
+          {
+            "name": "Avg_Sleep_Hours",
+            "expression": [
+              "",
+              "    AVERAGE('heart_2022_no_nans'[SleepHours])"
+            ],
+            "formatString": "0.00",
+            "lineageTag": "8c3541b6-545c-409a-964d-41b4d311f6b4"
+          },
+          {
+            "name": "%Vaccinated",
+            "expression": [
+              "",
+              "    DIVIDE(",
+              "        COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[FluVaxLast12] = \"Yes\")),",
+              "        COUNTROWS('heart_2022_no_nans')",
+              "    )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "1ceab3c3-f1a4-4d1c-a27e-250e44e38aa2"
+          },
+          {
+            "name": "%HadHeartAttack",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadHeartAttack] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "db7f7dbc-916a-4f4d-ac91-7b2de1201d77"
+          },
+          {
+            "name": "%HadAngina",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadAngina] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "cbfd5e29-03d9-49c5-95f8-1ffc6eaf5c68"
+          },
+          {
+            "name": "%HadStroke",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadStroke] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "d20d0f18-86c3-4cab-a3d0-34f97d4958f2"
+          },
+          {
+            "name": "%HadAsthma",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadAsthma] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "35784b21-9e31-43b0-8499-a0ae10070223"
+          },
+          {
+            "name": "%HadSkinCancer",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadSkinCancer] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "834bd4ba-a21b-4a79-b25e-47fffe1a5c41"
+          },
+          {
+            "name": "%HadCOPD",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadCOPD] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "3aca6785-fe3a-4989-991b-e54563e15e55"
+          },
+          {
+            "name": "%HadDepressiveDisorder",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadDepressiveDisorder] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "c1c22b13-9773-405f-8e4b-fb1f64415c78"
+          },
+          {
+            "name": "%HadKidneyDisease",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadKidneyDisease] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "c2d40c01-86c5-468d-b9a2-b33d7ba5145d"
+          },
+          {
+            "name": "%HadArthritis",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadArthritis] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "87a024cb-33d9-4516-be4f-2331fe981a2f"
+          },
+          {
+            "name": "%HadDiabetes",
+            "expression": [
+              "",
+              "            DIVIDE(",
+              "                COUNTROWS(FILTER('heart_2022_no_nans', 'heart_2022_no_nans'[HadDiabetes] = \"Yes\")),",
+              "                COUNTROWS('heart_2022_no_nans')",
+              "            )"
+            ],
+            "formatString": "0.00%",
+            "lineageTag": "a2980541-ea01-4e41-9ccc-f6bc9b648bee"
+          }
+        ],
         "partitions": [
           {
             "name": "heart_2022_no_nans",

@@ -25,7 +25,17 @@
       "filters": "[]",
       "height": 720.00,
       "name": "33cfb431f614c90d4f1a",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"92fb8d3f1b7d958ba9d4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.3949313621964,\"y\":91.91129883843716,\"z\":0,\"width\":498.75395987328403,\"height\":398.73284054910243,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 398.73,
+          "width": 498.75,
+          "x": 78.39,
+          "y": 91.91,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
