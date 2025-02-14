@@ -1,0 +1,608 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"heart_2022_no_nans\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "es-PA",
+    "cultures": [
+      {
+        "name": "es-PA",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-PA",
+    "tables": [
+      {
+        "name": "heart_2022_no_nans",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dedfd982-9f7e-486a-9618-022db289fbaa",
+            "sourceColumn": "State",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sex",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "006d6497-6f15-45b7-b088-5cf22cae59eb",
+            "sourceColumn": "Sex",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GeneralHealth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b2bee88a-ce48-4213-a607-7cd5cd7bbf62",
+            "sourceColumn": "GeneralHealth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PhysicalHealthDays",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e632544f-8bd2-4ae7-abd3-98a0a165c1a2",
+            "sourceColumn": "PhysicalHealthDays",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "MentalHealthDays",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a19a45c3-45b8-453a-953a-2ec498ac5be3",
+            "sourceColumn": "MentalHealthDays",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "LastCheckupTime",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e511bfdf-15a4-4901-9c38-fff48601ae74",
+            "sourceColumn": "LastCheckupTime",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PhysicalActivities",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d86e9965-eb1b-4b23-aecf-5bd9a315500e",
+            "sourceColumn": "PhysicalActivities",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SleepHours",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ef4c45e7-3c9f-49c8-a1a0-750d0770dd4f",
+            "sourceColumn": "SleepHours",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "RemovedTeeth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d222eece-9459-424a-b26e-b41dce36185b",
+            "sourceColumn": "RemovedTeeth",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadHeartAttack",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9fe70a70-a97b-4a86-a1d3-347e31205985",
+            "sourceColumn": "HadHeartAttack",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadAngina",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "63197bb2-7709-4719-a810-573cabe99e37",
+            "sourceColumn": "HadAngina",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadStroke",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "747cd9b0-96be-491e-86ac-45a78ab30c77",
+            "sourceColumn": "HadStroke",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadAsthma",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2eb5daf6-7e33-48c9-a50a-059f00e1f9e7",
+            "sourceColumn": "HadAsthma",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadSkinCancer",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "858a1f53-ae0c-4978-a632-d1e94b84bca2",
+            "sourceColumn": "HadSkinCancer",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadCOPD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e96e563b-68df-4c9f-8186-a63daf47dfef",
+            "sourceColumn": "HadCOPD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadDepressiveDisorder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13a380c4-c878-48bf-ae54-80822b6da882",
+            "sourceColumn": "HadDepressiveDisorder",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadKidneyDisease",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab5e28a2-06cf-44e5-9789-3ca9464f916c",
+            "sourceColumn": "HadKidneyDisease",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadArthritis",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2ba01f45-3467-4d0d-81eb-7bc009f60cb1",
+            "sourceColumn": "HadArthritis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HadDiabetes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7cbff37c-7373-4b07-9240-83f87f8981ec",
+            "sourceColumn": "HadDiabetes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DeafOrHardOfHearing",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24ed2c01-477d-4336-895d-41527f47547b",
+            "sourceColumn": "DeafOrHardOfHearing",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BlindOrVisionDifficulty",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24413902-1586-41cc-a638-9616e347e6ec",
+            "sourceColumn": "BlindOrVisionDifficulty",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DifficultyConcentrating",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c864be58-a7c4-4fbd-854a-8ace9654e97f",
+            "sourceColumn": "DifficultyConcentrating",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DifficultyWalking",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "25a088bf-854d-47d4-b5bf-9dcd67ef5749",
+            "sourceColumn": "DifficultyWalking",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DifficultyDressingBathing",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b2bbd7c-3fd4-4c86-8f18-24ecd127cc92",
+            "sourceColumn": "DifficultyDressingBathing",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DifficultyErrands",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d95c98d9-0438-4481-a51c-8fa35d29179f",
+            "sourceColumn": "DifficultyErrands",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SmokerStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "af54fbe4-90a8-4ecf-896c-19ff8e3811ac",
+            "sourceColumn": "SmokerStatus",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ECigaretteUsage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d7828f4-c6d6-4691-8705-5d547f32137b",
+            "sourceColumn": "ECigaretteUsage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChestScan",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3221d315-ad9a-407c-ac0a-43090a80f077",
+            "sourceColumn": "ChestScan",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RaceEthnicityCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5bd6a5f3-fc92-4031-8773-f60f2788695e",
+            "sourceColumn": "RaceEthnicityCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AgeCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "13ec9055-f0e9-4d59-be87-e9458c62c928",
+            "sourceColumn": "AgeCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HeightInMeters",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "065390bd-7043-4640-9e40-7e7401d61d54",
+            "sourceColumn": "HeightInMeters",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "WeightInKilograms",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "266a8986-3d28-40f3-b7e2-33ebd0e1d602",
+            "sourceColumn": "WeightInKilograms",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "BMI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "0f528adb-1eee-4732-886b-0959210fc033",
+            "sourceColumn": "BMI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "AlcoholDrinkers",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de2dda2d-308a-498a-a17e-e41c880317a8",
+            "sourceColumn": "AlcoholDrinkers",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HIVTesting",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eeea3946-ddcb-456b-8fd4-2806f083f246",
+            "sourceColumn": "HIVTesting",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FluVaxLast12",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6f2a4222-fad2-4c1b-8906-e2c7ceac6349",
+            "sourceColumn": "FluVaxLast12",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PneumoVaxEver",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2878d01-f90c-4e76-bbd8-0b3473d9689b",
+            "sourceColumn": "PneumoVaxEver",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TetanusLast10Tdap",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "597ff94f-36b0-4a9c-81fb-38561e12d297",
+            "sourceColumn": "TetanusLast10Tdap",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HighRiskLastYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c70f498-2f4f-4a41-a17e-b454afb26fb0",
+            "sourceColumn": "HighRiskLastYear",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CovidPos",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "29c41eb8-25c9-4a2a-9533-9fd62cfb16f6",
+            "sourceColumn": "CovidPos",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d92ce5f1-7ed7-4ba8-bc4b-bcceded1001b",
+        "partitions": [
+          {
+            "name": "heart_2022_no_nans",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\ariel\\Documents\\Data Viz\\HealthDataViz\\heart_2022_no_nans.csv\"),[Delimiter=\",\", Columns=40, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"State\", type text}, {\"Sex\", type text}, {\"GeneralHealth\", type text}, {\"PhysicalHealthDays\", Int64.Type}, {\"MentalHealthDays\", Int64.Type}, {\"LastCheckupTime\", type text}, {\"PhysicalActivities\", type text}, {\"SleepHours\", Int64.Type}, {\"RemovedTeeth\", type text}, {\"HadHeartAttack\", type text}, {\"HadAngina\", type text}, {\"HadStroke\", type text}, {\"HadAsthma\", type text}, {\"HadSkinCancer\", type text}, {\"HadCOPD\", type text}, {\"HadDepressiveDisorder\", type text}, {\"HadKidneyDisease\", type text}, {\"HadArthritis\", type text}, {\"HadDiabetes\", type text}, {\"DeafOrHardOfHearing\", type text}, {\"BlindOrVisionDifficulty\", type text}, {\"DifficultyConcentrating\", type text}, {\"DifficultyWalking\", type text}, {\"DifficultyDressingBathing\", type text}, {\"DifficultyErrands\", type text}, {\"SmokerStatus\", type text}, {\"ECigaretteUsage\", type text}, {\"ChestScan\", type text}, {\"RaceEthnicityCategory\", type text}, {\"AgeCategory\", type text}, {\"HeightInMeters\", type number}, {\"WeightInKilograms\", type number}, {\"BMI\", type number}, {\"AlcoholDrinkers\", type text}, {\"HIVTesting\", type text}, {\"FluVaxLast12\", type text}, {\"PneumoVaxEver\", type text}, {\"TetanusLast10Tdap\", type text}, {\"HighRiskLastYear\", type text}, {\"CovidPos\", type text}})",
+                "in",
+                "    #\"Tipo cambiado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
