@@ -1,6 +1,7 @@
 // Define the table
 var table = Model.Tables["heart_2022_no_nans"];
 
+// TODO MAKE SURE TO REMOVE MEASURES
 // Loop through all columns in the table
 foreach (var column in table.Columns)
 {
