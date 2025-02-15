@@ -541,6 +541,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "6f2a4222-fad2-4c1b-8906-e2c7ceac6349",
             "sourceColumn": "FluVaxLast12",
             "summarizeBy": "none"
@@ -554,6 +555,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "d2878d01-f90c-4e76-bbd8-0b3473d9689b",
             "sourceColumn": "PneumoVaxEver",
             "summarizeBy": "none"
@@ -567,6 +569,7 @@
               }
             ],
             "dataType": "string",
+            "isHidden": true,
             "lineageTag": "597ff94f-36b0-4a9c-81fb-38561e12d297",
             "sourceColumn": "TetanusLast10Tdap",
             "summarizeBy": "none"
@@ -729,6 +732,142 @@
             ],
             "isDataTypeInferred": true,
             "lineageTag": "aa397f0b-40ac-4cd9-9d5d-3d5280d84682",
+            "type": "calculated"
+          },
+          {
+            "name": "TotalHealthDays",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "heart_2022_no_nans[PhysicalHealthDays] + heart_2022_no_nans[MentalHealthDays]",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "2e95ea94-cda1-4fae-a3a7-7d0afa26f80f",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "FluVaxLast12_Bool",
+            "dataType": "int64",
+            "expression": [
+              "",
+              "        IF(",
+              "            'heart_2022_no_nans'[FluVaxLast12] = \"Yes\", 1,",
+              "            IF(",
+              "                'heart_2022_no_nans'[FluVaxLast12] = \"No\", 0,",
+              "                BLANK()",
+              "            )",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "99b6034b-e606-463a-b514-be3e3d217df8",
+            "type": "calculated"
+          },
+          {
+            "name": "PneumoVaxEver_Bool",
+            "dataType": "int64",
+            "expression": [
+              "",
+              "        IF(",
+              "            'heart_2022_no_nans'[PneumoVaxEver] = \"Yes\", 1,",
+              "            IF(",
+              "                'heart_2022_no_nans'[PneumoVaxEver] = \"No\", 0,",
+              "                BLANK()",
+              "            )",
+              "        )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "d207dfa2-f51d-43c0-bd2f-110fbbd06bbe",
+            "type": "calculated"
+          },
+          {
+            "name": "TetanusLast10",
+            "dataType": "int64",
+            "expression": [
+              "",
+              "    SWITCH(",
+              "        'heart_2022_no_nans'[TetanusLast10Tdap],",
+              "        \"Yes, received Tdap\", 1,",
+              "        \"Yes, received tetanus shot but not sure what type\", 1,",
+              "        \"Yes, received tetanus shot, but not Tdap\", 1,",
+              "        \"No, did not receive any tetanus shot in the past 10 years\", 0,",
+              "        BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "23a00dfa-b126-45ec-b555-15550d8f7716",
+            "type": "calculated"
+          },
+          {
+            "name": "Vaccinated",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "heart_2022_no_nans[TetanusLast10] + heart_2022_no_nans[FluVaxLast12_Bool]+heart_2022_no_nans[PneumoVaxEver_Bool]",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "fbd9b017-1312-4dfe-ab8a-26982216b3c7",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "LastCheckupCategory",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(",
+              "        'heart_2022_no_nans'[LastCheckupTime],",
+              "        \"Within past year (anytime less than 12 months ago)\", \"Less than a year\",",
+              "        \"5 or more years ago\", \"More than a year\",",
+              "        \"Within past 2 years (1 year but less than 2 years ago)\", \"More than a year\",",
+              "        \"Within past 5 years (2 years but less than 5 years ago)\", \"More than a year\",",
+              "        BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "3336884b-80e1-4120-81ac-d5af51ee967c",
+            "type": "calculated"
+          },
+          {
+            "name": "Smoked_Bool",
+            "dataType": "int64",
+            "expression": [
+              "",
+              "    SWITCH(",
+              "        'heart_2022_no_nans'[SmokerStatus],",
+              "        \"Never smoked\", 0,",
+              "        \"Former smoker\", 1,",
+              "        \"Current smoker - now smokes every day\", 1,",
+              "        \"Current smoker - now smokes some days\", 1,",
+              "        BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "baf80dc4-b670-42e6-8434-87ae3c46a290",
+            "type": "calculated"
+          },
+          {
+            "name": "HadSomeCondition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "heart_2022_no_nans[HadHeartAttack_Bool]+heart_2022_no_nans[HadDiabetes_Bool]+heart_2022_no_nans[HadStroke_Bool]",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "215863c1-a0bd-4bfd-8592-145536f97e4d",
+            "summarizeBy": "sum",
             "type": "calculated"
           }
         ],
