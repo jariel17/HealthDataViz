@@ -11,7 +11,7 @@ tetanusLast10Column.Expression = @"
         BLANK()
     )";
 
-// Optionally, hide the original column if needed
+
 var originalColumn = table.Columns["TetanusLast10Tdap"];
 originalColumn.IsHidden = true;
 

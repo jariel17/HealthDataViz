@@ -1,4 +1,3 @@
-// Define the table
 var table = Model.Tables["heart_2022_no_nans"];
 
 // 1 - MODIFY SPECIFIC COLUMNS FROM YES/NO TO BOOL
@@ -11,7 +10,6 @@ foreach (var columnName in columnsToProcess)
     // Get the original column
     var originalColumn = table.Columns[columnName];
 
-    // Create a new calculated column with boolean values
     var newColumnName = columnName + "_Bool"; // New column name, e.g., FluVaxLast12_Bool
     var newColumn = table.AddCalculatedColumn(newColumnName);
     newColumn.Expression = string.Format(@"
@@ -23,7 +21,6 @@ foreach (var columnName in columnsToProcess)
             )
         )", columnName);
 
-    // Hide the original column
     originalColumn.IsHidden = true;
 }
 
@@ -39,15 +36,14 @@ foreach (var table in Model.Tables)
         {
             // Add a new calculated column
             var newColumn = table.AddCalculatedColumn(
-                column.Name + "_Bool",  // New column name
+                column.Name + "_Bool",  
                 // DAX formula to convert Yes/No to 1/0, defaulting to 0 for invalid values
                 "IF(UPPER(" + column.DaxObjectFullName + ") = \"YES\", 1, IF(UPPER(" + column.DaxObjectFullName + ") = \"NO\", 0, BLANK()))"
             );
             
-            // Optional: Hide the original column
             column.IsHidden = true;
             
-            // Optional: Set format to integer
+            // Set format to integer
             newColumn.FormatString = "0";
         }
     }

@@ -10,10 +10,9 @@ vaccinatedMeasure.Expression = @"
     )";
 vaccinatedMeasure.FormatString = "0.00%"; // Optional: Format as percentage
 
-// Loop through all columns in the table
 foreach (var column in table.Columns)
 {
-    // Check if the column name starts with "Had"
+    
     if (column.Name.StartsWith("Had"))
     {
         // Create a measure for the percentage of "Yes" values in the column
